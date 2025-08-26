@@ -1,0 +1,23 @@
+export default function Dashboard() {
+  const card: React.CSSProperties = { background:'#fff', border:'1px solid #e5e7eb', borderRadius:16, padding:16 }
+  const grid = { display:'grid', gridTemplateColumns:'repeat(4, minmax(0,1fr))', gap:12 }
+
+  return (
+    <div>
+      <h1 style={{ margin:'8px 0 16px' }}>Dashboard</h1>
+      <section style={grid}>
+        <div style={card}><b>Open Leads</b><div style={{ fontSize:28, fontWeight:800, marginTop:6 }}>12</div></div>
+        <div style={card}><b>Estimates (30d)</b><div style={{ fontSize:28, fontWeight:800, marginTop:6 }}>$18,240</div></div>
+        <div style={card}><b>Jobs Scheduled</b><div style={{ fontSize:28, fontWeight:800, marginTop:6 }}>7</div></div>
+        <div style={card}><b>Low-Stock SKUs</b><div style={{ fontSize:28, fontWeight:800, marginTop:6 }}>3</div></div>
+      </section>
+
+      <section style={{ ...grid, marginTop:12 }}>
+        <div style={card}><b>Leads</b><p style={{ margin:0, color:'#6b7280' }}>Capture and track new customer interest.</p></div>
+        <div style={card}><b>Estimates</b><p style={{ margin:0, color:'#6b7280' }}>Send professional quotes in minutes.</p></div>
+        <div style={card}><b>Jobs</b><p style={{ margin:0, color:'#6b7280' }}>Assign crews and manage timelines.</p></div>
+        <div style={card}><b>Inventory</b><p style={{ margin:0, color:'#6b7280' }}>Low stock alerts & POs.</p></div>
+      </section>
+    </div>
+  )
+}
